@@ -1,0 +1,30 @@
+[core]
+	editor = nano
+	autocrlf = input
+	hooksPath = ~/.config/git/hooks
+
+[user]
+	name = Kyle Dacones
+	email = kyledaconesspam@icloud.com
+
+[push]
+	default = simple
+	followTags = yes
+
+[sendemail]
+	annotate = yes
+
+[pull]
+	rebase = true
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[init]
+	defaultBranch = master
+
+[commit]
+	verbose = yes
